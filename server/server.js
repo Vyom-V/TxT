@@ -13,7 +13,7 @@ let roomId = '';
 io.on("connection", (socket)=>{
     console.log(c++,"ID:"+socket.id);
     socket.on("sent",(data)=>{
-        console.log(roomId,data);
+        // console.log(roomId,data);
 
         if(roomId===''){
                  socket.broadcast.emit("received",data)
@@ -22,7 +22,7 @@ io.on("connection", (socket)=>{
     });
 
     socket.on("join_room",(data)=>{
-        console.log('room',data);
+        // console.log('room',data);
         roomId=data;
         socket.join(data);   
     });

@@ -2,9 +2,9 @@ const http = require('http');
 const express = require('express'); 
 const app = express();
 const cors = require("cors");
-const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const { Users } = require('./models/Model')
+const mongoose = require('mongoose');
+const { Users,Text } = require('./models/Model')
 
 app.use(cors());
 
@@ -29,6 +29,22 @@ mongoose.connect(dbUrl)
     console.log(err);
 }) 
 
+app.post('/texts' ,jsonParser , async (req,res)=>{
+    const room = req.body.room;
+    try{
+        const tmp = await Text.find({room}) 
+        let texts=[]; 
+        tmp.forEach(txt => {
+            texts.push({
+            username:txt.username,
+            msg:txt.textmsg
+            });
+        });
+        res.send({auth:true,texts});
+    }catch(err){
+        console.log(err);
+    }
+})
 
 app.post('/do-login' ,jsonParser, async (req,res)=>{
     const username = req.body.u;

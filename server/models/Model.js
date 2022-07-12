@@ -19,15 +19,15 @@ const userTemplate =  new Schema({
 },{timestamps:true})
 
 const messageTemplate =  new Schema({
-    username:{
-        type:String,
-        required: true,
-    },
     room:{
         type:String,
         required: true,
     },
-    text:{
+    username:{
+        type:String,
+        required: true,
+    },
+    textmsg:{
         type:String,
         required: true,
     },

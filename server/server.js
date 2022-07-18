@@ -28,7 +28,7 @@ io.on("connection", (socket)=>{
     console.log(c++,"ID:"+socket.id);
 
     socket.on("sent" , (data)=>{
-        console.log(roomId,data);
+        // console.log(roomId,data);
         
         if(roomId){
             //sending message to other nodes
@@ -38,7 +38,7 @@ io.on("connection", (socket)=>{
             const username = data.name;
             const textmsg = data.txt;
             const texts = new Text({ room , username , textmsg });
-            texts.save().then(err => {console.log(err)})
+            texts.save()
         }
         else console.log("didnt join room");
     });

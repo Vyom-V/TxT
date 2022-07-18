@@ -1,0 +1,88 @@
+/* #0A1929 */
+.back{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login{
+    border: 2px solid #dd3737 ;
+    border-radius: 5px;
+    padding: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 50vh;
+  }
+
+.register{
+  border: 2px solid #dd3737 ;
+  border-radius: 5px;
+  padding: 4vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 60vh;
+}
+  
+.tb{
+      border-radius: 5px;
+        width:fit-content ;
+      color: aliceblue;
+  }
+
+input{
+  color: rgb(243,246,249)  !important;
+}  
+.css-1o7gkuu-MuiFormLabel-root-MuiInputLabel-root {
+  color: rgb(243,246,249) !important ;
+}
+.css-1p618nz-MuiInputBase-root-MuiFilledInput-root:before {
+  border-bottom: 1px solid rgb(243,246,249) !important;
+}
+
+.btn{
+  margin:4vh !important ;
+}
+
+.css-1sszw6i-MuiButtonBase-root-MuiButton-root.Mui-disabled { 
+  color: rgb(243 246 249 / 48%) !important;
+  background-color: rgb(224 26 26 / 39%) !important;
+}
+
+.shadow-drop-2-center {
+	-webkit-animation: shadow-drop-2-center 1.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: shadow-drop-2-center 1.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes shadow-drop-2-center {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    -webkit-box-shadow: 0 0 0 0 #d52e2e;
+            box-shadow: 0 0 0 0 #d52e2e;
+  }
+  100% {
+    -webkit-transform: translateZ(50px);
+            transform: translateZ(50px);
+    -webkit-box-shadow: 0 0 40px 20px #d52e2e4e;
+            box-shadow: 0 0 40px 20px #d52e2e4e;
+  }
+}
+@keyframes shadow-drop-2-center {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    -webkit-box-shadow: 0 0 0 0 #d52e2e;
+            box-shadow: 0 0 0 0 #d52e2e;
+  }
+  100% {
+    -webkit-transform: translateZ(50px);
+            transform: translateZ(50px);
+    -webkit-box-shadow: 0 0 40px 20px #d52e2e4e;
+            box-shadow: 0 0 40px 20px #d52e2e4e;
+  }
+}
